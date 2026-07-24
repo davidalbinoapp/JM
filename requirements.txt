@@ -1,0 +1,8 @@
+# Bibliotecas Python que o Jornal Mural precisa.
+# Instaladas automaticamente pelos instaladores (setup_mac.command /
+# setup_windows.bat). Sem versão travada de propósito: assim funciona em
+# qualquer versão de Python (3.10 em diante), no Mac e no Windows.
+python-pptx
+python-docx
+Pillow
+pymupdf
