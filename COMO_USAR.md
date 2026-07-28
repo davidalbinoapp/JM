@@ -4,8 +4,12 @@
 
 Um conjunto de arquivos que juntos automatizam a montagem do JM:
 
-- **`auto_jm.py`** — o atalho do dia a dia. Recebe **só a pasta da semana** e
-  monta tudo (acha o briefing e casa os QR codes sozinho). É o que você roda.
+- **`Montar JM.command`** — o atalho de **dois cliques**: abre uma janela pra
+  você escolher a pasta da semana e já monta o JM (sem digitar caminho). É o
+  jeito mais fácil de rodar no dia a dia.
+- **`auto_jm.py`** — o motor do atalho. Recebe **só a pasta da semana** e monta
+  tudo (acha o briefing e casa os QR codes sozinho). É o que o `Montar JM`
+  chama por baixo — dá pra rodar direto pelo Terminal também.
 - **`run_jm.py`** — o script "manual" por trás, usado quando você precisa
   informar um QR ou o nome de saída na mão.
 - **`jm_engine.py`** — o motor (diagramação, corte e enquadramento de foto,
@@ -62,11 +66,27 @@ Como backup e pra usar em outra máquina, mantenha a `JM-main` num **repositóri
 GitHub grátis** (pode ser público, não tem nada sensível): sempre que um
 arquivo do sistema mudar, suba a versão nova.
 
-## Passo 2 — Rodar toda semana (Terminal)
+## Passo 2 — Rodar toda semana
 
 Coloque **todas as fotos e QR codes na pasta da semana ANTES de rodar** (o
-motor lê a pasta no instante em que roda). Depois é **um comando só**, passando
-só a pasta:
+motor lê a pasta no instante em que roda). Depois, escolha um dos dois jeitos:
+
+### Jeito fácil — dois cliques (sem digitar caminho)
+
+Dê **dois cliques** em **`Montar JM.command`** (dentro da `JM-main`). Abre uma
+janela do Finder: **clique na pasta da semana** e confirme. Pronto — o motor
+monta o `.pptx` dentro da própria pasta e mostra o resultado ali mesmo. Nenhum
+caminho pra digitar, nada pra decorar.
+
+- Na **primeira vez**, o Mac pode dizer "desenvolvedor não identificado":
+  clique com o **botão direito** no `Montar JM.command` → **Abrir** → **Abrir**.
+  Depois disso, dois cliques normais funcionam sempre.
+- Dica: pra ter o atalho à mão, arraste o `Montar JM.command` pro Dock ou faça
+  um **alias** dele na Área de Trabalho (botão direito → "Criar alias").
+
+### Jeito Terminal (alternativa)
+
+Se preferir o Terminal, é **um comando só**, passando só a pasta:
 
 ```
 cd ~/Documents/Artes/AGA/2026/JM\ SYSTEM/JM-main && python3 auto_jm.py "../JM 21-07"
