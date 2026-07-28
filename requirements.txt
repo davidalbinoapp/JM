@@ -6,3 +6,8 @@ python-pptx
 python-docx
 Pillow
 pymupdf
+# numpy: usado no enquadramento pelo ASSUNTO (saliência por resíduo espectral).
+# Sem ele, o motor ainda roda, mas o corte cai pro centro (a saliência é pulada).
+# Antes vinha "de carona" só quando o OpenCV (opcional) era instalado — agora é
+# explícito pra o enquadramento funcionar mesmo numa instalação sem OpenCV.
+numpy
